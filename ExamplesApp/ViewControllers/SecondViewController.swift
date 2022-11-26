@@ -8,7 +8,11 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var greetingLabel: UILabel!
+    
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +29,10 @@ class SecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Actions
+    @IBAction func closeView(_ sender: UIButton) {
+    }
+    
 
 }

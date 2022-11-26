@@ -15,9 +15,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="yQ8-Co-9n7">
+                                <rect key="frame" x="30" y="179" width="333" height="95"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ic-4o-7qv">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BwN-n5-Lui">
+                                        <rect key="frame" x="0.0" y="61" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQs-U4-OBD">
+                                <rect key="frame" x="40" y="697" width="313" height="41"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Greeting">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showGreeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5c-X9-TZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RQs-U4-OBD" secondAttribute="trailing" constant="40" id="29a-en-kJ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RQs-U4-OBD" secondAttribute="bottom" constant="80" id="4Gf-Kf-bkK"/>
+                            <constraint firstItem="RQs-U4-OBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5Kp-Go-uRL"/>
+                            <constraint firstItem="yQ8-Co-9n7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="LLI-2c-38O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yQ8-Co-9n7" secondAttribute="trailing" constant="30" id="Pnh-hR-hdT"/>
+                            <constraint firstItem="yQ8-Co-9n7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="sgk-9v-9qe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFields" destination="BwN-n5-Lui" id="Sl1-lU-tDq"/>
+                        <outletCollection property="textFields" destination="3ic-4o-7qv" collectionClass="NSMutableArray" id="W2Y-yG-j4g"/>
+                        <segue destination="im5-Cw-msS" kind="presentation" identifier="showVC" modalPresentationStyle="fullScreen" id="THW-EX-izo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,9 +77,45 @@
                     <view key="view" contentMode="scaleToFill" id="gw9-o9-o1i">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztr-N7-c2x">
+                                <rect key="frame" x="40" y="179" width="313" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFc-LZ-M8k">
+                                <rect key="frame" x="40" y="697" width="313" height="41"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeView:" destination="im5-Cw-msS" eventType="touchUpInside" id="Nwc-9q-sNa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="WvG-Je-G0K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GFc-LZ-M8k" firstAttribute="leading" secondItem="WvG-Je-G0K" secondAttribute="leading" constant="40" id="NnQ-E3-UQQ"/>
+                            <constraint firstItem="WvG-Je-G0K" firstAttribute="trailing" secondItem="Ztr-N7-c2x" secondAttribute="trailing" constant="40" id="Spx-Jc-u74"/>
+                            <constraint firstItem="Ztr-N7-c2x" firstAttribute="top" secondItem="WvG-Je-G0K" secondAttribute="top" constant="120" id="Yrj-ou-jQP"/>
+                            <constraint firstItem="WvG-Je-G0K" firstAttribute="trailing" secondItem="GFc-LZ-M8k" secondAttribute="trailing" constant="40" id="jD4-50-Xdo"/>
+                            <constraint firstItem="WvG-Je-G0K" firstAttribute="bottom" secondItem="GFc-LZ-M8k" secondAttribute="bottom" constant="80" id="tfF-fd-J0E"/>
+                            <constraint firstItem="Ztr-N7-c2x" firstAttribute="leading" secondItem="WvG-Je-G0K" secondAttribute="leading" constant="40" id="wmc-pm-imc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="Ztr-N7-c2x" id="Cwj-KZ-9ta"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSR-fz-iTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +123,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
