@@ -14,6 +14,10 @@
 		284DCB02293267E1003711E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284DCB01293267E1003711E4 /* Assets.xcassets */; };
 		284DCB05293267E1003711E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284DCB03293267E1003711E4 /* LaunchScreen.storyboard */; };
 		284DCB0D2932684A003711E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DCB0C2932684A003711E4 /* SecondViewController.swift */; };
+		284DCB1429390CAD003711E4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DCB1329390CAD003711E4 /* NetworkManager.swift */; };
+		284DCB1729391334003711E4 /* MarvelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DCB1629391334003711E4 /* MarvelModel.swift */; };
+		284DCB1929391352003711E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DCB1829391352003711E4 /* Constants.swift */; };
+		284DCB1B29391DC6003711E4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DCB1A29391DC6003711E4 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		284DCB04293267E1003711E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284DCB06293267E1003711E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		284DCB0C2932684A003711E4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		284DCB1329390CAD003711E4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		284DCB1629391334003711E4 /* MarvelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelModel.swift; sourceTree = "<group>"; };
+		284DCB1829391352003711E4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		284DCB1A29391DC6003711E4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				284DCB0F2932685C003711E4 /* App */,
+				284DCB152939128B003711E4 /* Models */,
 				284DCB0E29326851003711E4 /* ViewControllers */,
 				284DCB1029326865003711E4 /* Storyboards */,
+				284DCB1229390C8A003711E4 /* Services */,
 				284DCB1129326873003711E4 /* Resources */,
 			);
 			path = ExamplesApp;
@@ -98,8 +108,26 @@
 			isa = PBXGroup;
 			children = (
 				284DCB01293267E1003711E4 /* Assets.xcassets */,
+				284DCB1829391352003711E4 /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		284DCB1229390C8A003711E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				284DCB1329390CAD003711E4 /* NetworkManager.swift */,
+				284DCB1A29391DC6003711E4 /* Service.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		284DCB152939128B003711E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				284DCB1629391334003711E4 /* MarvelModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,8 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284DCB1729391334003711E4 /* MarvelModel.swift in Sources */,
+				284DCB1B29391DC6003711E4 /* Service.swift in Sources */,
 				284DCB0D2932684A003711E4 /* SecondViewController.swift in Sources */,
 				284DCAFD293267DF003711E4 /* FirstViewController.swift in Sources */,
+				284DCB1429390CAD003711E4 /* NetworkManager.swift in Sources */,
+				284DCB1929391352003711E4 /* Constants.swift in Sources */,
 				284DCAF9293267DF003711E4 /* AppDelegate.swift in Sources */,
 				284DCAFB293267DF003711E4 /* SceneDelegate.swift in Sources */,
 			);

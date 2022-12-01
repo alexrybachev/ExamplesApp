@@ -22,12 +22,18 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ic-4o-7qv">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="mZW-AB-l5N"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BwN-n5-Lui">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BwN-n5-Lui">
                                         <rect key="frame" x="0.0" y="61" width="333" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="LTB-bV-ukc"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -63,7 +69,7 @@
                     <connections>
                         <outlet property="textFields" destination="BwN-n5-Lui" id="Sl1-lU-tDq"/>
                         <outletCollection property="textFields" destination="3ic-4o-7qv" collectionClass="NSMutableArray" id="W2Y-yG-j4g"/>
-                        <segue destination="im5-Cw-msS" kind="presentation" identifier="showVC" modalPresentationStyle="fullScreen" id="THW-EX-izo"/>
+                        <segue destination="im5-Cw-msS" kind="presentation" identifier="showVC" modalPresentationStyle="fullScreen" id="4D8-tx-hAu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -99,6 +105,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeView:" destination="im5-Cw-msS" eventType="touchUpInside" id="Nwc-9q-sNa"/>
+                                    <segue destination="zdf-eQ-XUm" kind="unwind" unwindAction="unwindFor:" id="fPS-0X-nmU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,6 +125,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSR-fz-iTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zdf-eQ-XUm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="831" y="4"/>
         </scene>

@@ -12,11 +12,14 @@ class SecondViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var greetingLabel: UILabel!
     
+    // MARK: - Variables
+    var personName: String!
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        greetingLabel.text = "Welcome, \(personName)!" 
     }
     
 
@@ -35,4 +38,6 @@ class SecondViewController: UIViewController {
     }
     
 
+
 }
+
